@@ -9,7 +9,10 @@
 </p>
 
 ## Table of contents
-
+* [About this repository](#about-this-repository)
+* [Content of this repository](#content-of-this-repository)
+  * [Codebase organization](#codebase-organization)
+* [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
 ## About this repository
@@ -25,7 +28,7 @@ This protocol comprises four stages.
 Detailed steps for each stage and suggestions on how to choose the configuration at each step can be found in the protocol. 
 
 <!-- File organization -->
-## Content of the repository
+## Content of this repository
 ### Codebase organization
 
 This codebase contains the following directories:
@@ -49,8 +52,6 @@ This codebase contains the following directories:
 <li><code>integrate_rnafm.py</code>: example of Step 5B in the protocol for directly integrating RNA-FM into a Python script as a package.</li>
 
 </ul>
-
-### Working example dataset
 
 
 
