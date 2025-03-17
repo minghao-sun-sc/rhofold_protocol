@@ -1,5 +1,4 @@
-# rMSA #
-rMSA (RNA Multiple Sequence Alignment) is an automated pipeline to search
+This is the code repository for rMSA (RNA Multiple Sequence Alignment), an automated pipeline to search
 and align homologs from RNAcentral and nt databases for a target RNA.
 
 ## Third party programs ##
