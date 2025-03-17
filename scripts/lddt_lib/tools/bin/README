@@ -1,0 +1,12 @@
+#--------- compile ------------------#
+#-> normal version
+# cd source_code && make && cd ../
+
+#--------- running example ----------#
+#-> convert RNA structure from PDB to SEQ
+id=3hjw_D
+util/NUC_To_SEQ example/${id}.pdb ${id}.seq
+#-> calculate the distance matrix of a given RNA structure + it's sequence
+./NUC_To_DistMat ${id}.seq example/${id}.pdb ${id}.dist_mat 0
+#-> dump the key atoms of a given RNA structure + it's sequence
+./NUC_To_KeyAtom ${id}.seq example/${id}.pdb ${id}.key_pdb 7 1 1
