@@ -12,6 +12,9 @@
 * [About this repository](#about-this-repository)
 * [Content of this repository](#content-of-this-repository)
   * [Codebase organization](#codebase-organization)
+  * [Working example dataset information](#working-example-data-information)
+  * [Version of the codes in this repository](#version-of-the-codes-in-this-repository)
+* [Quick start](#quick-start)
 * [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
@@ -53,8 +56,47 @@ This codebase contains the following directories:
 
 </ul>
 
+As mentioned in the protocol, inputting relative paths can be a common source of errors
 
+### Working example data information
 
+This repository provides two sets of data as working examples for performing the protocol.
+
+1. <code>data/rhofold/3owz_A/</code> for RNA 3D structure prediction. This dataset includes a structure from PDB (`.pdb` file) and its associated sequence (`.fasta` file) and secondary structure (extracted by DSSR, `.npy` file, in contact map format). There is also an `.afa` file for the constructed multiple sequence alignment (MSA).
+
+2. <code>data/rnafm/rf02684/seqs.fasta</code> for RNA-FM embedding generation. This dataset includes a set of RNA sequences derived from Rfam, using the RF02684 Twister family's seed sequences.
+
+### Version of the codes in this repository
+
+This codebase adapts the codes from our previous work RhoFold+ and the codes from rMSA2. The exact version of these two methods are as follows.
+
+- `RhoFold+` from its <a href='https://github.com/ml4bio/RhoFold/tree/df930033dd40c6c3f923dcafcdc16cf50eb742c8'>official GitHub repo</a>, commit `df93003`.
+- `rMSA` from its <a href='https://github.com/kad-ecoli/rMSA2'>official GitHub repo</a>, commit `3fa7c22`.
+
+Note that the codes for RhoFold+ has been adapted from the official release, including command-line arguments, checkpoint loading, and RNA-FM embedding generation.
+
+Users may also be aware of the <a href='https://github.com/ml4bio/RNA-FM'>RNA-FM repository</a>. In this protocol, since our main focus is on 3D structure modeling, we only use the codes from the RhoFold+ repository, which includes the same RNA-FM model and can also perform its core functions such as embedding generation.
+
+## Quick start
+
+The details of each step is described in the protocol. Here, we briefly outline how to download and install the dependencies for this repository, corresponding to the equipment setup section's mandatory steps in the protocol.
+
+```
+git clone https://github.com/WangJiuming/rhofold_protocol.git
+cd rhofold_protocol
+```
+Then create the cond environment from the `.yml` configuration file.
+```
+conda env create -f environment.yml
+```
+This should install all the dependencies necessary for this protocol. To activate the environment, simply run the following.
+```
+conda activate rhofold_protocol
+```
+The pre-trained model checkpoint used in this protocol can be downloaded from the server via the following. The estimated download time is 5 minutes.
+```
+wget https://proj.cse.cuhk.edu.hk/aihlab/RhoFold/api/download?filename=RhoFold_pretrained.pt -O ./checkpoints/rhofold_pretrained_params.pt
+```
 
 ## Contact
 
