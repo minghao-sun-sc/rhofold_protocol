@@ -20,7 +20,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About this repository
 
-This codebase contains the relevant codes and example data associated with the protocol paper titled "A language-model-based deep learning platform for predicting RNA 3D structure". The protocol is based on our previous research on RNA 3D structure modeling, which is published in Nature Methods (<a href='https://www.nature.com/articles/s41592-024-02487-0'>full text available</a>).
+This codebase contains the relevant codes and example data associated with the paper titled "A language-model-based deep learning platform for predicting RNA 3D structure". The protocol is based on our previous research on RNA 3D structure modeling, which is published in Nature Methods (<a href='https://www.nature.com/articles/s41592-024-02487-0'>full text available</a>).
 
 This protocol comprises four stages.
 - Stage 1: prepare data
@@ -65,6 +65,21 @@ This repository provides two sets of data as working examples for performing the
 1. <code>data/rhofold/3owz_A/</code> for RNA 3D structure prediction. This dataset includes a structure from PDB (`.pdb` file) and its associated sequence (`.fasta` file) and secondary structure (extracted by DSSR, `.npy` file, in contact map format). There is also an `.afa` file for the constructed multiple sequence alignment (MSA).
 
 2. <code>data/rnafm/rf02684/seqs.fasta</code> for RNA-FM embedding generation. This dataset includes a set of RNA sequences derived from Rfam, using the RF02684 Twister family's seed sequences.
+
+### Customized scripts for this protocol
+
+To facilitate the analysis and evaluation of the results, we have incorporated some additional scripts in this repository under the `scripts/` directory. The codes of these scripts are also shown in the protocol in their respective steps with command line argument-passed paths replaced by fixed ones.
+
+Stage 2
+- `integrate_rnafm.py` (Step 5B)
+
+Stage 4
+- `parse_plddt.py` (Step 7)
+- `add_plddt_bfactor.py` (Step 8)
+- `visualize_plddt.py` (Step 9)
+- `eval_lddt.py` (Step 11)
+- `visualize_ss_prob.py` (Step 12)
+- `visualize_ss.py` (Step 13)
 
 ### Version of the codes in this repository
 
