@@ -2,16 +2,6 @@
 rMSA (RNA Multiple Sequence Alignment) is an automated pipeline to search
 and align homologs from RNAcentral and nt databases for a target RNA.
 
-## Install ##
-```bash
-git clone https://github.com/kad-ecoli/rMSA
-cd rMSA
-./database/script/update.sh    # Download RNAcentral and nt
-```
-All precompiled binaries in the rMSA package are for 64bit Linux (x86-64) only.
-For other operating systems, you need to compile the rMSA ultilities using
-``src/Makefile``, and other thrid-party programs listed below.
-
 ## Third party programs ##
 The ``bin`` folder includes binaries precompiled for 64bit Linux for
 the following programs.
@@ -36,6 +26,20 @@ The output format of nhmmer and cmsearch are modifed from
 Run ``./rMSA.pl`` without command line argument to get full option list,
 including alternative databases, temporary folders, number of CPU threads
 (default is 1) and the secondary structure. Nucleotide U is converted to T.
+
+## Citation
+```bibtex
+@article{zhang2023rmsa,
+  title={rMSA: a sequence search and alignment algorithm to improve RNA structure modeling},
+  author={Zhang, Chengxin and Zhang, Yang and Pyle, Anna Marie},
+  journal={Journal of Molecular Biology},
+  volume={435},
+  number={14},
+  pages={167904},
+  year={2023},
+  publisher={Elsevier}
+}
+```
 
 ## License ##
 This program is free software: you can redistribute it and/or modify
