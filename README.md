@@ -95,7 +95,7 @@ Users may also be aware of the <a href='https://github.com/ml4bio/RNA-FM'>RNA-FM
 
 ## Quick start
 
-The details of each step is described in the protocol. Here, we briefly outline how to download and install the dependencies for this repository, corresponding to the equipment setup section's mandatory steps in the protocol.
+The details of each step is described in the protocol. Here, we briefly outline (a) how to download and install the dependencies for this repository, corresponding to the equipment setup section's mandatory steps in the protocol, and (b) how to perform a quick structure prediction with the working example given in this protocol.
 
 ```
 git clone https://github.com/WangJiuming/rhofold_protocol.git
@@ -113,6 +113,11 @@ The pre-trained model checkpoint used in this protocol can be downloaded from th
 ```
 wget https://proj.cse.cuhk.edu.hk/aihlab/RhoFold/api/download?filename=RhoFold_pretrained.pt -O ./checkpoints/rhofold_pretrained_params.pt
 ```
+Now, RhoFold+ is ready for structure prediction by executing the following. Note that the model is configured to use GPU device `cuda:0` by setting the argument `--device cuda:0`.
+```
+python rhofold/inference.py --input_fasta ./data/rhofold/3owz_A/3owz_A.fasta --input_msa ./data/rhofold/3owz_A/3owz_A.afa --output_dir ./results/rhofold/3owz_A --device cuda:0 
+```
+Then, users may check the outputs located at the directory specified by the `--output_dir` argument.
 
 ## Contact
 
