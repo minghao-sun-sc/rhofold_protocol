@@ -21,7 +21,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About this repository
 
-This codebase contains the relevant codes and example data associated with the paper titled "A language-model-based deep learning platform for predicting RNA 3D structure". The protocol is based on our previous research on RNA 3D structure modeling, which is published in Nature Methods (<a href='https://www.nature.com/articles/s41592-024-02487-0'>full text available</a>).
+This codebase contains the relevant codes and example data associated with the paper titled "A language-model-based deep learning platform for predicting RNA 3D structure". The protocol is based on our previous research on RNA 3D structure modeling, which is published in Nature Methods (<a href='https://www.nature.com/articles/s41592-024-02487-0'>full text available</a>) [1].
 
 This protocol comprises four stages.
 - Stage 1: prepare data
@@ -40,18 +40,18 @@ This codebase contains the following directories:
 <li><code>checkpoints/</code>: for downloading and keeping the model checkpoints, including the pre-trained RhoFold+ model or the RNA-FM checkpoint.</li>
 <li><code>data/</code>: keeping the data as working examples for this protocol, which includes:</li>
 
-1. a structure prediction example at <code>data/rhofold/3owz_A/</code> from Protein Data Bank (PDB) and
+1. a structure prediction example at <code>data/rhofold/3owz_A/</code> from Protein Data Bank (PDB) [2] and
 
-2. a sequence dataset example for testing embedding generation at <code>data/rnafm/rf02684/seqs.fasta</code> from Rfam.
+2. a sequence dataset example for testing embedding generation at <code>data/rnafm/rf02684/seqs.fasta</code> from Rfam [3].
 
-<li><code>msa_database</code>: for downloading and keeping the MSA databases, including RNAcentral, Rfam, and nt. 
+<li><code>msa_database</code>: for downloading and keeping the MSA databases, including Rfam [3], RNAcentral [4], and nt [5]. 
 
 1. The <code>msa_database/bin</code> directory contains the scripts necessary for downloading and building the databases. 
 
 2. The <code>msa_database/db</code> directory holds all the downloaded databases.</li>
 <li><code>results</code>: for keeping the output from this protocol.</li>
 <li><code>rhofold</code>: main module of the RhoFold+ model, which is adapted from the original RhoFold+ model to streamline the workflow of this protocol.</li>
-<li><code>rmsa</code>: for keeping the rMSA tool for MSA search, which is cloned from the official rMSA2 release.</li>
+<li><code>rmsa</code>: for keeping the rMSA tool [6] for MSA search, which is cloned from the official rMSA2 release.</li>
 <li><code>scripts</code>: for keeping the additional codes shown in the protocol.</li>
 <li><code>integrate_rnafm.py</code>: example of Step 5B in the protocol for directly integrating RNA-FM into a Python script as a package.</li>
 
@@ -63,7 +63,7 @@ As mentioned in the protocol, inputting relative paths can be a common source of
 
 This repository provides two sets of data as working examples for performing the protocol.
 
-1. <code>data/rhofold/3owz_A/</code> for RNA 3D structure prediction. This dataset includes a structure from PDB (`.pdb` file) and its associated sequence (`.fasta` file) and secondary structure (extracted by DSSR, `.npy` file, in contact map format). There is also an `.afa` file for the constructed multiple sequence alignment (MSA).
+1. <code>data/rhofold/3owz_A/</code> for RNA 3D structure prediction. This dataset includes a structure from PDB (`.pdb` file) and its associated sequence (`.fasta` file) and secondary structure (extracted by DSSR [7], `.npy` file, in contact map format). There is also an `.afa` file for the constructed multiple sequence alignment (MSA).
 
 2. <code>data/rnafm/rf02684/seqs.fasta</code> for RNA-FM embedding generation. This dataset includes a set of RNA sequences derived from Rfam, using the RF02684 Twister family's seed sequences.
 
@@ -84,7 +84,7 @@ Stage 4
 
 ### Version of the codes in this repository
 
-This codebase adapts the codes from our previous work RhoFold+ and the codes from rMSA2. The exact version of these two methods are as follows.
+This codebase adapts the codes from our previous work RhoFold+ [1] and the codes from rMSA2 [6]. The exact version of these two methods are as follows.
 
 - `RhoFold+` from its <a href='https://github.com/ml4bio/RhoFold/tree/df930033dd40c6c3f923dcafcdc16cf50eb742c8'>official GitHub repo</a>, commit `df93003`.
 - `rMSA` from its <a href='https://github.com/kad-ecoli/rMSA2'>official GitHub repo</a>, commit `3fa7c22`.
@@ -117,3 +117,19 @@ wget https://proj.cse.cuhk.edu.hk/aihlab/RhoFold/api/download?filename=RhoFold_p
 ## Contact
 
 For questions or comments, please feel free to post an issue or reach the author at jmwang@link.cuhk.edu.hk.
+
+## Refernces
+
+[1] Shen, Tao, et al. "Accurate RNA 3D structure prediction using a language model-based deep learning approach." Nature Methods (2024): 1-12.
+
+[2] Ontiveros-Palacios, Nancy, et al. "Rfam 15: RNA families database in 2025." Nucleic acids research 53.D1 (2025): D258-D267.
+
+[3] "RNAcentral 2021: secondary structure integration, improved sequence search and new member databases." Nucleic acids research 49, no. D1 (2021): D212-D220.
+
+[4] Bank, Protein Data. "Protein data bank." Nature New Biol 233.223 (1971): 10-1038.
+
+[5] Sayers, Eric W., et al. "Database resources of the National Center for Biotechnology Information in 2025." Nucleic Acids Research 53.D1 (2024): D20.
+
+[6] Zhang, Chengxin, Yang Zhang, and Anna Marie Pyle. "rMSA: a sequence search and alignment algorithm to improve RNA structure modeling." Journal of Molecular Biology 435.14 (2023): 167904.
+
+[7] Lu, Xiang-Jun, Harmen J. Bussemaker, and Wilma K. Olson. "DSSR: an integrated software tool for dissecting the spatial structure of RNA." Nucleic acids research 43.21 (2015): e142-e142.
