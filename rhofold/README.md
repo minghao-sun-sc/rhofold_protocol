@@ -1,7 +1,7 @@
 
 
 
-This is the open source code for RhoFold+ from "RhoFold+: Accurate RNA 3D structure prediction using a language model-based deep learning approach" published in Nature Methods.
+This is the open source code for RhoFold+ from "RhoFold+: Accurate RNA 3D structure prediction using a language model-based deep learning approach" published in Nature Methods. The codes in the repostiory has been adapted from the official release. 
 
 ## Citation
 
