@@ -44,16 +44,15 @@ This codebase contains the following directories:
 
 2. a sequence dataset example for testing embedding generation at <code>data/rnafm/rf02684/seqs.fasta</code> from Rfam [3].
 
-<li><code>msa_database</code>: for downloading and keeping the MSA databases, including Rfam [3], RNAcentral [4], and nt [5]. 
+<li><code>msa_database/</code>: for downloading and keeping the MSA databases, including Rfam [3], RNAcentral [4], and nt [5]. 
 
-1. The <code>msa_database/bin</code> directory contains the scripts necessary for downloading and building the databases. 
+1. The <code>msa_database/bin/</code> directory contains the scripts necessary for downloading and building the databases. 
 
-2. The <code>msa_database/db</code> directory holds all the downloaded databases.</li>
-<li><code>results</code>: for keeping the output from this protocol.</li>
-<li><code>rhofold</code>: main module of the RhoFold+ model, which is adapted from the original RhoFold+ model to streamline the workflow of this protocol.</li>
-<li><code>rmsa</code>: for keeping the rMSA tool [6] for MSA search, which is cloned from the official rMSA2 release.</li>
-<li><code>scripts</code>: for keeping the additional codes shown in the protocol.</li>
-<li><code>integrate_rnafm.py</code>: example of Step 5B in the protocol for directly integrating RNA-FM into a Python script as a package.</li>
+2. The <code>msa_database/db/</code> directory holds all the downloaded databases.</li>
+<li><code>results/</code>: for keeping the output from this protocol.</li>
+<li><code>rhofold/</code>: main module of the RhoFold+ model, which is adapted from the original RhoFold+ model to streamline the workflow of this protocol.</li>
+<li><code>rmsa/</code>: for keeping the rMSA tool [6] for MSA search, which is cloned from the official rMSA2 release.</li>
+<li><code>scripts/</code>: for keeping the additional codes shown in the protocol. (see the "Customized scripts for this protocol" section below for details) </li> 
 
 </ul>
 
