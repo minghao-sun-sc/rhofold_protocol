@@ -6,12 +6,6 @@ This is the open source code for RhoFold+ from "RhoFold+: Accurate RNA 3D struct
 ## Citation
 
 ```bibtex
-@article{shen2022e2efold,
-  title={E2Efold-3D: End-to-End Deep Learning Method for accurate de novo RNA 3D Structure Prediction},
-  author={Shen, Tao and Hu, Zhihang and Peng, Zhangzhi and Chen, Jiayang and Xiong, Peng and Hong, Liang and Zheng, Liangzhen and Wang, Yixuan and King, Irwin and Wang, Sheng and others},
-  journal={arXiv preprint arXiv:2207.01586},
-  year={2022}
-}
 @article{shen2024accurate,
   title={Accurate RNA 3D structure prediction using a language model-based deep learning approach},
   author={Shen, Tao and Hu, Zhihang and Sun, Siqi and Liu, Di and Wong, Felix and Wang, Jiuming and Chen, Jiayang and Wang, Yixuan and Hong, Liang and Xiao, Jin and others},
