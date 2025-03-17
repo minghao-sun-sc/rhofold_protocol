@@ -20,7 +20,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About this repository
 
-This codebase contains the relevant codes and example data associated with the paper titled "A language-model-based deep learning platform for predicting RNA 3D structure". The protocol is based on our previous research on RNA 3D structure modeling, which is published in Nature Methods (<a href='[www.google.com](https://www.nature.com/articles/s41592-024-02487-0)'>full text available</a>).
+This codebase contains the relevant codes and example data associated with the protocol paper titled "A language-model-based deep learning platform for predicting RNA 3D structure". The protocol is based on our previous research on RNA 3D structure modeling, which is published in Nature Methods (<a href='https://www.nature.com/articles/s41592-024-02487-0'>full text available</a>).
 
 This protocol comprises four stages.
 - Stage 1: prepare data
