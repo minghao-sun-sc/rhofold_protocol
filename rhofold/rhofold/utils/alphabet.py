@@ -124,7 +124,7 @@ def get_msa_feature(msa_path,
     return torch.LongTensor(fea1d[:, :].transpose((1, 0)))
 
 
-def get_features(fas_fpath, msa_fpath, msa_depth=128):
+def get_features(fas_fpath, msa_fpath, msa_depth=256):
     '''
     Get features from MSA (the inference input of RhoFold model).
 
