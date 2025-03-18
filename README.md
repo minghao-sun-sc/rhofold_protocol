@@ -85,9 +85,17 @@ All scripts have enabled command-line argument input for the input and output pa
 ```
 python scripts/parse_plddt.py --help
 ```
-shows the following.
+will show the following available options.
 ```
-Parsing 
+usage: parse_lddt.py [-h] [--npz_path NPZ_PATH] [--save_plddt_path SAVE_PLDDT_PATH]
+
+Parse pLDDT scores from npz file
+
+options:
+  -h, --help            show this help message and exit
+  --npz_path NPZ_PATH   Path to npz file
+  --save_plddt_path SAVE_PLDDT_PATH
+                        Path to save pLDDT scores
 ```
 
 ### Version of the codes in this repository
