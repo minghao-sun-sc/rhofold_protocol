@@ -3,8 +3,15 @@ import torch
 import numpy as np
 from Bio import SeqIO
 
+import argparse
+
+parser = argparse.ArgumentParser(description='Integrate RNA-FM for embedding generation')
+parser.add_argument('--fasta_path', type=str, help='Path to fasta file')
+
+args = parser.parse_args()
+
 # Load data from a FASTA file
-fasta_path = './data/rnafm/rf02684/seqs.fasta'
+fasta_path = args.fasta_path  #'./data/rnafm/rf02684/seqs.fasta'
 records = list(SeqIO.parse(fasta_path, 'fasta'))
 
 # Prepare the input data format
