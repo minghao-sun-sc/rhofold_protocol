@@ -50,8 +50,8 @@ for i in range(len(seq)):
     pair_idx = ct_df.iloc[i, 1] - 1
 
     if pair_idx != 0 and pair_idx > i:
-        contact_map[i, pair_idx - 1] = 1
-        contact_map[pair_idx - 1, i] = 1
+        contact_map[i, pair_idx] = 1
+        contact_map[pair_idx, i] = 1
 
 np.save(npy_path, contact_map)
 
