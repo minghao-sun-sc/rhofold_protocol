@@ -231,7 +231,7 @@ def generate_clusters(input_file, output_dir, n_clusters=None):
     # Generate new MSAs for each cluster
     for i in range(n_clusters):
         cluster_df = df[labels == i]
-        output_file = os.path.join(output_dir, f"cluster_{i+1:03}.a3m")
+        output_file = os.path.join(output_dir, f"cluster_{i+1:03}.afa")
         _write(cluster_df, output_file)
 
 def main():
