@@ -80,6 +80,7 @@ Stage 4
 - `eval_lddt.py` (Step 11)
 - `visualize_ss_prob.py` (Step 12)
 - `visualize_ss.py` (Step 13)
+- `eval_f1score.py` (Step 14)
 
 All scripts have enabled command-line argument input for the input and output paths. Details of the available arguments can be found with the `--help` command, e.g.,
 ```
