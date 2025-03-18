@@ -552,39 +552,3 @@ class PdbParser():
                     o_file.write(line_str + '\n')
 
         logging.info(f'save pdb to {path}')
-
-if __name__ == '__main__':
-    from rnafold.utils import zfold_init
-
-    version = 'v0.0'
-    frame_version = 'v2'
-    n_key_atoms = 5
-    n_key_atoms_eval = 5
-
-    # configurations
-    eps = 1e-6
-    device = torch.device('cuda:0')
-    # device = torch.device('cpu')
-    root = '/public/home/taoshen/data/rna/RNA3D/data_px'
-
-    pdb_root = f'{root}/full_pdb/'
-    seq_root = f'{root}/key_seq_v2/'
-
-    tgts = os.listdir(seq_root)
-    tgts = [t.replace('.seq','') for t in tgts if t.endswith('.seq')]
-    tgts = tgts[-100:]
-
-    rmsds = []
-    for tgt in tgts:
-        pdb_fpath = f'{pdb_root}/{tgt}.full_pdb'
-        fas_fpath = f'{seq_root}/{tgt}.seq'
-        print(pdb_fpath)
-        # initialization
-        zfold_init()
-        pdb_parser = PdbParser(pdb_version=version, frame_version=frame_version)
-        aa_seq, cord_tns_base, cmsk_mat_base, _, _ = pdb_parser.run(pdb_fpath, fas_fpath=fas_fpath)
-        cords, masks = pdb_parser.get_atoms_sel(aa_seq, torch.FloatTensor(cord_tns_base), torch.LongTensor(cmsk_mat_base))
-        print(aa_seq)
-        print(cord_tns_base.shape)
-        print(cords.shape, masks.shape)
-        exit()
