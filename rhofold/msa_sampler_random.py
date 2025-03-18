@@ -176,7 +176,7 @@ def sample_sequences(input_file, output_directory, sample_times):
         sampled_df = alignment_df.sample(n=SAMPLE_SIZE)
 
         # Save the sampled alignment
-        output_file = os.path.join(output_directory, f"sample_{i+1:03d}.a3m")
+        output_file = os.path.join(output_directory, f"sample_{i+1:03d}.afa")
         _write(sampled_df, output_file)
 
 def main():
