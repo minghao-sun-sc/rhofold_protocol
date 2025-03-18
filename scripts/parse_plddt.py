@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import numpy as np
 
 import argparse
@@ -13,6 +15,8 @@ save_plddt_path = args.save_plddt_path  # './results/rhofold/3owz_A/plddt.npy'
 
 distogram_data = np.load(npz_path)
 plddt_scores = distogram_data['plddt']  # shape = (1, L)
+
+Path(save_plddt_path).parent.mkidr(parents=True, exist_ok=True)
 
 np.save(save_plddt_path, plddt_scores)
 
