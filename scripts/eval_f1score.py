@@ -23,6 +23,8 @@ def cal_f1score(pred_ss, target_ss):
 
     f1_score = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0.0
 
+    return f1_score
+
 parser = argparse.ArgumentParser(description='Evaluating the secondary structure F1-score')
 parser.add_argument('--pred_ss_path', type=str, help='Path to the predicted 2D structure as .npy contact map')
 parser.add_argument('--true_ss_path', type=str, help='Path to the ground truth 2D structure as .npy contact map')
