@@ -118,6 +118,11 @@ python rhofold/inference.py --input_fasta ./data/rhofold/3owz_A/3owz_A.fasta --i
 ```
 Then, users may check the outputs located at the directory specified by the `--output_dir` argument.
 
+To perform a quick analysis of prediction, we can check the pLDDT output by the model.
+```
+python scripts/parse_plddt.py --npz_path ./results/rhofold/3owz_A/results.npz
+```
+
 ## Contact
 
 For questions or comments, please feel free to post an issue or reach the author at jmwang@link.cuhk.edu.hk.
