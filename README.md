@@ -81,6 +81,15 @@ Stage 4
 - `visualize_ss_prob.py` (Step 12)
 - `visualize_ss.py` (Step 13)
 
+All scripts have enabled command-line argument input for the input and output paths. Details of the available arguments can be found with the `--help` command, e.g.,
+```
+python scripts/parse_plddt.py --help
+```
+shows the following.
+```
+Parsing 
+```
+
 ### Version of the codes in this repository
 
 This codebase adapts the codes from our previous work RhoFold+ [1] and the codes from rMSA2 [6]. The exact version of these two methods are as follows.
