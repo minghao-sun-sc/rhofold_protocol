@@ -130,6 +130,8 @@ The pre-trained model checkpoint used in this protocol can be downloaded from th
 ```
 wget https://proj.cse.cuhk.edu.hk/aihlab/RhoFold/api/download?filename=RhoFold_pretrained.pt -O ./checkpoints/rhofold_pretrained_params.pt
 ```
+In case the above link is unavailable, the checkpoint can also be downloaded manually using the <a href="https://drive.google.com/file/d/1WPB-gNwm5XucU9LT8Rmi6yrzbLJGm5ka/view?usp=sharing">alternate link</a>.
+
 Now, RhoFold+ is ready for structure prediction by executing the following. Note that the model is configured to use GPU device `cuda:0` by setting the argument `--device cuda:0`.
 ```
 python rhofold/inference.py --input_fasta ./data/rhofold/3owz_A/3owz_A.fasta --input_msa ./data/rhofold/3owz_A/3owz_A.afa --output_dir ./results/rhofold/3owz_A --device cuda:0 
