@@ -147,7 +147,7 @@ python scripts/parse_plddt.py --npz_path ./results/rhofold/3owz_A/results.npz
 
 For questions or comments, please feel free to post an issue or reach the author at jmwang@link.cuhk.edu.hk.
 
-## Refernces
+## References
 
 [1] Shen, Tao, et al. "Accurate RNA 3D structure prediction using a language model-based deep learning approach." Nature Methods (2024): 1-12.
 
