@@ -126,9 +126,10 @@ This should install all the dependencies necessary for this protocol. To activat
 ```
 conda activate rhofold_protocol
 ```
-The pre-trained model checkpoint used in this protocol can be downloaded from the server via the following. The estimated download time is 5 minutes.
+The pre-trained model checkpoint used in this protocol can be downloaded from the server via the following. The estimated download time is one minute.
 ```
-wget https://proj.cse.cuhk.edu.hk/aihlab/RhoFold/api/download?filename=RhoFold_pretrained.pt -O ./checkpoints/rhofold_pretrained_params.pt
+wget https://huggingface.co/cuhkaih/rhofold/resolve/main/rhofold_pretrained_params.pt
+mv rhofold_pretrained_params.pt checkpoints/
 ```
 In case the above link is unavailable, the checkpoint can also be downloaded manually using the <a href="https://drive.google.com/file/d/1WPB-gNwm5XucU9LT8Rmi6yrzbLJGm5ka/view?usp=sharing">alternate link</a>.
 
