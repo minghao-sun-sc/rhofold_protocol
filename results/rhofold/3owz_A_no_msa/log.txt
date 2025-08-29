@@ -1,0 +1,14 @@
+2025-08-29 23:41:56,502 - INFO: Constructing RhoFold
+2025-08-29 23:41:57,279 - INFO:     loading ./checkpoints/rhofold_pretrained_params.pt
+2025-08-29 23:41:58,002 - INFO: Input_fas ./data/rhofold/3owz_A/3owz_A.fasta
+2025-08-29 23:41:58,003 - INFO: The model will use the single query sequence only. Setting the MSA path to the input fasta file.
+2025-08-29 23:41:58,003 - INFO: Started RhoFold Inference
+2025-08-29 23:41:58,047 - INFO:     Inference using device cuda:0
+2025-08-29 23:42:02,189 - INFO:     Export PDB file to ./results/rhofold/3owz_A_no_msa/unrelaxed_model.pdb
+2025-08-29 23:42:02,189 - INFO: Finished RhoFold Inference in 4.186 seconds
+2025-08-29 23:42:02,189 - INFO: Started Amber Relaxation : 1000 iterations
+2025-08-29 23:42:02,189 - INFO:     AmberRelaxation: Using GPU
+2025-08-29 23:42:17,972 - INFO:     Minimizing ...
+2025-08-29 23:45:15,452 - INFO:     Energy at Minima is -573412.496 kcal/mol
+2025-08-29 23:45:15,622 - INFO:     Export PDB file to ./results/rhofold/3owz_A_no_msa/relaxed_1000_model.pdb
+2025-08-29 23:45:15,624 - INFO: Finished Amber Relaxation : 1000 iterations in 193.434 seconds
